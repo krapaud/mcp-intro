@@ -1,0 +1,80 @@
+[
+  {
+    "id": "python-decorators",
+    "title": "Python Decorators",
+    "summary": "Decorators are functions that wrap another function to extend or modify its behavior without changing its source code.",
+    "prerequisites": ["Functions", "Scope", "First-class functions"],
+    "key_concepts": ["Higher-order functions", "Wrapper functions", "functools.wraps", "Closures"],
+    "common_mistakes": [
+      "Forgetting to return the wrapper function",
+      "Not preserving the original function's metadata with functools.wraps",
+      "Confusing decorator arguments with the decorated function's arguments"
+    ],
+    "practice_idea": "Create a decorator that logs the name and execution time of any function it wraps."
+  },
+  {
+    "id": "python-generators",
+    "title": "Python Generators",
+    "summary": "Generators are functions that produce a sequence of values lazily using the yield keyword, instead of returning them all at once.",
+    "prerequisites": ["Functions", "Iterators", "Loops"],
+    "key_concepts": ["yield keyword", "Lazy evaluation", "Generator expressions", "StopIteration"],
+    "common_mistakes": [
+      "Assuming a generator can be iterated more than once",
+      "Mixing return and yield incorrectly",
+      "Materializing the whole generator into a list, losing the memory benefit"
+    ],
+    "practice_idea": "Write a generator that yields Fibonacci numbers up to a given limit without storing them all in memory."
+  },
+  {
+    "id": "list-comprehensions",
+    "title": "List Comprehensions",
+    "summary": "List comprehensions provide a concise syntax for creating lists by applying an expression to each item in an iterable.",
+    "prerequisites": ["Lists", "Loops", "Conditionals"],
+    "key_concepts": ["Expression syntax", "Filtering with if", "Nested comprehensions"],
+    "common_mistakes": [
+      "Writing overly complex nested comprehensions that hurt readability",
+      "Forgetting the filtering condition placement",
+      "Using comprehensions for side effects instead of building a list"
+    ],
+    "practice_idea": "Rewrite a for-loop that filters and transforms a list of numbers as a single list comprehension."
+  },
+  {
+    "id": "exception-handling",
+    "title": "Exception Handling",
+    "summary": "Exception handling lets a program respond to runtime errors using try, except, else, and finally blocks instead of crashing.",
+    "prerequisites": ["Functions", "Control flow"],
+    "key_concepts": ["try/except", "Custom exceptions", "finally block", "Exception hierarchy"],
+    "common_mistakes": [
+      "Catching overly broad exceptions like bare except:",
+      "Swallowing exceptions silently without logging",
+      "Using exceptions for normal control flow"
+    ],
+    "practice_idea": "Write a function that reads a file and raises a custom exception with a clear message if the file is missing."
+  },
+  {
+    "id": "oop-inheritance",
+    "title": "Object-Oriented Inheritance",
+    "summary": "Inheritance allows a class to reuse and extend the behavior of another class, forming a hierarchy of related types.",
+    "prerequisites": ["Classes", "Objects", "Methods"],
+    "key_concepts": ["Base and derived classes", "super()", "Method overriding", "Multiple inheritance"],
+    "common_mistakes": [
+      "Forgetting to call super().__init__()",
+      "Overusing inheritance where composition would be simpler",
+      "Creating deep or ambiguous inheritance hierarchies"
+    ],
+    "practice_idea": "Create a base class Animal with a speak method, then override it in two subclasses."
+  },
+  {
+    "id": "async-await",
+    "title": "Async / Await",
+    "summary": "Async and await enable writing asynchronous, non-blocking code that can run many I/O-bound tasks concurrently.",
+    "prerequisites": ["Functions", "Event loop basics"],
+    "key_concepts": ["coroutines", "asyncio.run", "await expressions", "Concurrency vs parallelism"],
+    "common_mistakes": [
+      "Calling a coroutine without awaiting it",
+      "Blocking the event loop with synchronous code",
+      "Assuming async code runs in parallel on multiple CPU cores"
+    ],
+    "practice_idea": "Write two async functions that fetch mock data concurrently using asyncio.gather."
+  }
+]
